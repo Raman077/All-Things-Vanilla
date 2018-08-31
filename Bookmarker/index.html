@@ -1,0 +1,65 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <title>BookMarker</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="jumbotron.css" rel="stylesheet">
+  </head>
+
+  <body onload="showBookmarks()">
+
+    <main role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3">BookMarker</h1>
+          <p>This app is a utility to create a bookmark</p>
+          <form>
+            <div class="form-group">
+            <label>Site Name</label>
+            <input type="text" class ="form-control" id="site-name" name="site name" placeholder="Site Name">
+            </div>
+            
+            <div class="form-group">
+            <label>Site Url</label>
+            <input type="text" class ="form-control" id="site-url" name="site link" placeholder="Site Link">
+          </div>
+          </form>
+
+          <p><a class="btn btn-primary" id="button-submit" href="#" role="button">Submit &raquo;</a></p>
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+          <div id ="bookmarkResults">
+
+          </div>
+        </div>
+
+        <hr>
+
+      </div> <!-- /container -->
+
+    </main>
+
+    <footer class="container">
+      <p>&copy; Company 2017-2018</p>
+    </footer>
+    <script type="text/javascript" src="./js/main.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  </body>
+</html>
