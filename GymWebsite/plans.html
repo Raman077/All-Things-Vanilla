@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Gym - Personal Training</title>
+	<meta name = "viewport" content="width= device-width, initial-scale = 1.0">
+	<link rel="stylesheet" type="text/css" href="blueberry.css">
+
+<style type="text/css">
+
+				/*********** General Styles ***********/
+
+body {
+	font-family: "Lucida Grande", Verdana, sans-serif;
+	font-size: 12px;
+	text-align: center;
+	line-height: 1.5em;
+	color: #fff;
+	margin:0;
+	background: url(/img/bg.gif) repeat;
+	}
+
+#page {
+	position: relative;
+	margin: 0 auto;
+	width: 900px;
+	}
+	
+a:link, a:visited {
+	color: #09C;
+	text-decoration: underline;
+	}
+	
+a:hover {
+	color: #C1E97C;
+	text-decoration: none;
+	}
+
+h1 {
+	margin: 0;
+	margin-bottom:30px;
+	margin-top: 30px;
+	padding-bottom: 0px;
+	font-family: "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+	font-size: 35px;
+	font-weight: normal;
+	color: #C1E97C;
+	}
+	
+h2 {
+	color: #09C;
+	margin: 0px;
+	margin-top: 20px;
+	font-size: 20px;
+	font-weight: normal;
+	font-family: "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+	}
+	
+h2 a:link, h2 a:visited{
+	text-decoration: none;
+	}
+		
+h3 {
+	color: #C1E97C;
+	margin: 0px;
+	margin-bottom: 10px;
+	font-weight: normal;
+	font-family: "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+	font-size: 20px;
+	}
+	
+h4 {
+	margin: 0px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	font-family: "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+	font-size: 18px;
+	font-weight: normal;
+	color: #666;
+	}
+	
+h5 {
+	margin: 0px;
+	font-family: "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #666;
+	}
+
+img {
+	margin: 5px;
+	border: 2px;
+	border-color: #fff;
+	}
+	
+a:link, a:visited img {
+	border:2px;
+	border-color: #09C;
+	}
+	
+a:hover img {
+	cursor: pointer;
+	border: 4px;
+	border-color: #C1E97C;
+	}
+
+input{
+	color: #666;
+	background-color: #1E1E1E;
+	border: solid #333 1px;
+	margin: 0px;
+	margin-top: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+	}
+	
+textarea{
+	color: #666;
+	background-color: #1E1E1E;
+	border: solid #333 1px;
+	margin: 0px;
+	margin-top: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+	}
+	
+input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hover{
+	border: solid #666 1px;
+	}
+	
+	
+				/*********** Navigation Styles ***********/
+		
+#navigation {
+	list-style: none;
+	position: relative;
+	top: 0px;
+	display: block;
+	font-size:18px;
+	text-align: left;
+	padding: 0px;
+	margin: 0 auto;
+	height: 50px;
+	width: 900px;
+	background-color: #1E1E1E;
+}
+
+#nav {
+	list-style: none;
+	position: relative;
+	float: left;
+	top: 15px;
+	display: block;
+	font-size:18px;
+	padding: 0px;
+	margin: 0px;
+	margin-left: 15px;
+	}
+	
+#nav li {
+	float: left;
+	background: none;
+	}
+	
+#nav a, #nav a:visited {
+	position: relative;
+	float: left;
+	display: block;
+	overflow: hidden;
+	text-align: left;
+	margin-left: 15px;
+	color: #666;
+	text-decoration: none;
+	font-weight: bold;
+	}
+	
+#nav a:hover {
+	color: #09C;
+	font-weight: bold;
+	text-decoration: none;
+	}
+
+#nav #home a.active, #nav #code a.active, #nav #learn a.active {
+	color: #09C;
+	font-weight: bold;
+	text-decoration: none;
+	}
+	
+				/*********** Main Styles ***********/
+				
+				
+#main {
+	position: relative;
+	float: left;
+	display: block;
+	width: 900px;
+	margin: 0 auto;
+	padding: 0px;
+	text-align: left;
+	min-height: 400px;
+	background-color: #1E1E1E;
+	}
+
+#bottom{
+	width: 900px;
+	display: block;
+	position: relative;
+	text-align: left;
+	font-size: 10px;
+	float: left;
+	margin: 0px;
+	padding: 0px;
+	height: 60px;
+	background-color: #000;
+	}
+	
+#bottom span{
+	display: block;
+	margin-left: 30px;
+	margin-top: 10px;
+	}
+
+#leftcol {
+	float: left;
+	display: block;
+	margin: 0px;
+	margin-left: 30px;
+	margin-top: 0px;
+	margin-bottom: 45px;
+	width: 560px;
+	}
+
+#rightcol {
+	float: right;
+	display: block;
+	width: 200px;
+	padding: 0px;
+	margin: 0px;
+	margin-right: 30px;
+	margin-top: 90px;
+	font-size: 10px;
+	}
+
+#fcontent{
+	float:left;
+	}
+
+#fcontent h2{
+	margin-top:40px;
+	margin-bottom:15px;
+}
+a:link .fimage {
+	border: 3px solid #09c;
+	margin-left: 0px;
+}
+a:visited .fimage {
+	border: 3px solid #09c;
+	margin-left: 0px;
+}
+a:hover .fimage {
+	border: 3px solid #C1E97C;
+}
+#fcontent a:link, a:visited h2{
+	text-decoration:none;
+}
+#fcontent a:hover h2{
+	color: #C1E97C;
+	text-decoration: none;
+}
+
+#news{
+	float: left;
+	margin-bottom: 10px;
+	}
+
+.newsitem{
+	float: right;
+	position: relative;
+	margin: 0px;
+	margin-bottom: 10px;
+	width: 500px;
+	}
+.newsitem h2{
+	margin-top: 10px;
+	}
+	
+.date{
+	float: left;
+	position: relative;
+	display: block;
+	text-align: center;
+	color: #666;
+	font-size: 8px;
+	margin: 0px;
+	margin-right: 10px;
+	margin-top: 10px;
+	width: 48px;
+	height: 60px;
+	background: #000;
+	border: #333 1px solid;
+	}
+
+.date .month{
+	font-size:12px;
+	font-weight:bold;
+	text-transform:uppercase;
+	margin: 0;
+	margin-top: 10px;
+	}
+	
+.date .day{
+	font-size:18px;
+	font-weight:bold;
+	margin: 0;
+	margin-top: 5px;	
+	}
+	
+.comments {
+	font-size: 11px;
+	margin-top: 10px;
+	}
+
+.small {
+	background-color: #000;
+	border: solid;
+	border-width: 1px;
+	border-color: #333;
+	margin-bottom: 30px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	}
+
+.small .content{
+	margin-left: 15px;
+	margin-right: 20px;
+	}
+
+.smallBr {
+	height:10px;
+	}
+	
+#ranking {
+	position:relative;
+	background-color: #151515;
+	float: left;
+	width:900px;
+	text-align:left;
+	font-size: 11px;
+	color: #666;
+	}
+	
+#ranking h3 {
+	font-size: 12px;
+	}
+	
+.smalltext {
+	font-size: 9px;
+	}
+	
+.col {
+	float:left;
+	display:inline;
+	width:240px;
+	margin-left:30px;
+	margin-right: 30px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	}
+	
+.ranklist{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	}
+	
+	
+				/*********** Code & Learn Navigation Styles ***********/
+
+#sidenav {
+	margin: 0px;
+	padding: 0px;
+	margin-bottom: 30px;
+	list-style: none;
+	width: 200px;
+	}
+	
+#sidenav li { 
+	padding: 0px;
+	margin: 0px;
+	}
+
+#sidenav a {
+	display: block;
+	padding-left: 10px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border-bottom: 1px solid #1e1e1e;
+	color: #09c;
+	background-color: #333;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+	}
+
+#sidenav a:hover {
+	color: #333;
+	background-color: #09c;
+	}
+
+#sidenav a.active {
+	color: #333;
+	background-color: #09c;
+	}
+	
+	
+	
+				/*********** Code & Learn List Styles ***********/
+
+
+#codelearn h2 {
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+#codelearn h5 {
+	padding-top: 10px;
+	padding-bottom: 0px;
+}
+
+#codelearnlist h2{
+	padding-top: 20px;
+	color: #666;
+}
+
+#codelearnlist li{
+	list-style: none;
+	padding-top: 10px;
+	padding-left: 0px;
+}
+
+#codelearnlist ul{
+	padding-left: 0px;
+}
+
+#codelearnlist .leftcol{
+	float: left;
+	width: 275px;
+	}
+	
+#codelearnlist .rightcol{
+	float: left;
+	}
+
+pre {
+white-space: pre-wrap;       /* css-3 */
+white-space: -moz-pre-wrap;   /* Mozilla, since 1999 */
+white-space: -pre-wrap;      /* Opera 4-6 */
+white-space: -o-pre-wrap;    /* Opera 7 */
+word-wrap: break-word;       /* Internet Explorer 5.5+ */
+background: #000;
+padding: 20px;
+border: 1px solid #333;
+margin-top: 0px;
+}
+
+	
+
+				/*********** Header Styles ***********/
+
+#header {
+position: relative;
+margin: 0 auto;
+display: block;
+height: 150px;
+width: 900px;
+background: url(img/header.gif) no-repeat #1E1E1E center;
+}
+#banner {
+float: right;
+margin-right: 40px;
+margin-top: 15px;
+}
+#banner a, #banner a:visited {
+	position: relative;
+	float: left;
+	display: block;
+	overflow: hidden;
+	text-align: left;
+	margin-left: 15px;
+	color: #C1E97C;
+	text-decoration: none;
+	font-weight: bold;
+	}
+	
+#banner a:hover {
+	color: #09c;
+	font-weight: bold;
+	text-decoration: none;
+	}
+
+
+</style>
+
+</head>
+<script type="text/javascript">
+	<script language="JavaScript">
+<!--
+function calculateBmi() {
+var weight = document.bmiForm.weight.value
+var height = document.bmiForm.height.value
+if(weight > 0 && height > 0){	
+var finalBmi = weight/(height/100*height/100)
+document.bmiForm.bmi.value = finalBmi
+if(finalBmi < 18.5){
+document.bmiForm.meaning.value = "That you are too thin."
+}
+if(finalBmi > 18.5 && finalBmi < 25){
+document.bmiForm.meaning.value = "That you are healthy."
+}
+if(finalBmi > 25){
+document.bmiForm.meaning.value = "That you have overweight."
+}
+}
+else{
+alert("Please Fill in everything correctly")
+}
+}
+//-->
+</script>
+</script>
+<body>
+	<form name="bmiForm">
+Your Weight(kg): <input type="text" name="weight" size="10"><br />
+Your Height(cm): <input type="text" name="height" size="10"><br />
+<input type="button" value="Calculate BMI" onClick="calculateBmi()"><br />
+Your BMI: <input type="text" name="bmi" size="10"><br />
+This Means: <input type="text" name="meaning" size="25"><br />
+<input type="reset" value="Reset" />
+</form>
+
+</body>
